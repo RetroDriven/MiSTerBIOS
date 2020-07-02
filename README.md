@@ -17,6 +17,7 @@ The purpose of this Script to to aid in downloading the correct BIOS files for M
 
 ## Credits ##
 * <a href="https://github.com/MiSTer-devel/Main_MiSTer/wiki">Sorgelig</a>
+* <a href="https://github.com/Locutus73">Locutus73</a>
 
 ## Disclaimer / Legal Information
 By downloading and using this Script you are agreeing to the following:
