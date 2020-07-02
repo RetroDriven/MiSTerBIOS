@@ -6,7 +6,7 @@ The purpose of this Script to to aid in downloading the correct BIOS files for M
 <a href="https://github.com/RetroDriven/MiSTerBIOS/releases/download/1.0/RetroDriven_MiSTerBIOS_v1.1.zip"> Script Updater and INI File Download </a>
 
 ## Usage ##
-* Download the ZIP file above and Extract/Copy <b>Update_RetroDriven_BIOS.sh</b> and <b>Update_RetroDriven_BIOS.ini</b> to your Scripts Folder on your MiSTer SD Card(typically /media/fat/Scripts).
+* Download the ZIP file above and Extract/Copy <b>Update_MiSTerBIOS.sh</b> and <b>Update_MiSTerBIOS.ini</b> to your Scripts Folder on your MiSTer SD Card(typically /media/fat/Scripts).
 * Simply run <b>Update_RetroDriven_BIOS.sh</b> via MiSTer Scripts Menu to Download/Update BIOS files.
 * Optional: Changing the <b>Update_RetroDriven_BIOS.ini</b> file is optional based on your setup/needs.
 

@@ -32,7 +32,7 @@ By downloading and using this Script you are agreeing to the following:
 
 # ========= OPTIONS ==================
 URL="https://github.com"
-SCRIPT_URL="${URL}/RetroDriven/MiSTerBIOS/blob/master/Scripts/Updater_RetroDriven_BIOS.sh"
+SCRIPT_URL="${URL}/RetroDriven/MiSTerBIOS/blob/master/Scripts/Updater_MiSTerBIOS.sh"
 CURL_RETRY="--connect-timeout 15 --max-time 120 --retry 3 --retry-delay 5 --silent"
 
 # ========= ADVANCED OPTIONS =========
