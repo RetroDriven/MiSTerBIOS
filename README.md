@@ -3,7 +3,7 @@ The purpose of this Script to to aid in downloading the correct BIOS files for M
 
 # Updater Script and INI Download
 
-<a href="https://github.com/RetroDriven/MiSTerMAME/releases/download/SE_v1.3/RetroDriven_MAME_SE_Updater_v1.3.zip"> Script Updater and INI File Download </a>
+<a href="https://github.com/RetroDriven/MiSTerBIOS/releases/download/1.0/RetroDriven_MiSTerBIOS_v1.1.zip"> Script Updater and INI File Download </a>
 
 ## Usage ##
 * Download the ZIP file above and Extract/Copy <b>Update_RetroDriven_BIOS.sh</b> and <b>Update_RetroDriven_BIOS.ini</b> to your Scripts Folder on your MiSTer SD Card(typically /media/fat/Scripts).
