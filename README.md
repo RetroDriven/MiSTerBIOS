@@ -11,9 +11,9 @@ The purpose of this Script to to aid in downloading the correct BIOS files for M
 * Optional: Changing the <b>Update_RetroDriven_BIOS.ini</b> file is optional based on your setup/needs.
 
 ## NOTES ##
-* By default the entire BIOS Pack will be downloaded to /media/fat/BIOS
-* If you already have BIOS within your /Games/Core(/Games/NES/boot0.rom for example) folders these will be skipped to avoid copy over what you have already
-* If you don't have BIOS within your /Games/Core(/Games/NES/boot0.rom for example) folders the Script will copy over the most common/compatible BIOS for you
+* By default the entire BIOS Pack will be downloaded to <b>/media/fat/BIOS</b>
+* If you already have BIOS within your <b>/Games/Core</b>(/Games/NES/boot0.rom for example) folders these will be skipped to avoid copy over what you have already
+* If you don't have BIOS within your <b>/Games/Core</b>(/Games/NES/boot0.rom for example) folders the Script will copy over the most common/compatible BIOS for you
 
 ## Credits ##
 * <a href="https://github.com/MiSTer-devel/Main_MiSTer/wiki">Sorgelig</a>
