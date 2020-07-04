@@ -196,7 +196,7 @@ Download_NEOGEO_UNIBIOS(){
 	echo "Checking Existing $BIOS_TYPE BIOS Files for Updates/New Files......"
 	echo
 
-		curl ${CURL_RETRY} ${SSL_SECURITY_OPTION} -# --fail --location -o "uni-bios-40.zip" http://unibios.free.fr/download/uni-bios-40.zip 
+		curl ${CURL_RETRY} ${SSL_SECURITY_OPTION} -# --fail --location -o "uni-bios-40.zip" "$NEOGEO_UNIBIOS_URL" 
         unzip -o -j "uni-bios-40.zip"
         rm "uni-bios-40.zip"	
 
