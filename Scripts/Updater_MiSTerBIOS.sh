@@ -52,8 +52,8 @@ MEGACD_MAIN_URL="https://www.retrodriven.appboxes.co/MiSTerBIOS/Games/MegaCD/"
 #NES Main BIOS URL
 NES_MAIN_URL="https://www.retrodriven.appboxes.co/MiSTerBIOS/Games/NES/"
 
-#NeoGeo Main BIOS URL
-NEOGEO_MAIN_URL="https://www.retrodriven.appboxes.co/MiSTerBIOS/Games/NeoGeo/"
+#NeoGeo Unibios URL
+NEOGEO_UNIBIOS_URL="http://unibios.free.fr/download/uni-bios-40.zip"
 
 #TurboGrafx16 Main BIOS URL
 TGFX16_MAIN_URL="https://www.retrodriven.appboxes.co/MiSTerBIOS/Games/TGFX16-CD/"
@@ -179,6 +179,31 @@ Download_Default_BIOS(){
 }
 
 
+#Download Default NeoGeo UniBios Function
+Download_NEOGEO_UNIBIOS(){
+
+    echo
+    echo "================================================================"
+    echo "                     Downloading BIOS Files                     "
+    echo "================================================================"
+    sleep 1
+
+	#Create Directories
+	mkdir -p "$BIOS_PATH"
+    	cd "$BIOS_PATH"
+    
+	echo
+	echo "Checking Existing $BIOS_TYPE BIOS Files for Updates/New Files......"
+	echo
+
+		curl ${CURL_RETRY} ${SSL_SECURITY_OPTION} -# --fail --location -o "uni-bios-40.zip" http://unibios.free.fr/download/uni-bios-40.zip 
+        unzip -o -j "uni-bios-40.zip"
+        rm "uni-bios-40.zip"	
+
+	sleep 1
+    	clear 	
+}
+
 #Footer Function
 Footer(){
 clear
@@ -227,6 +252,25 @@ fi
 #Download BIOS
 Download_BIOS
 
+#Download NeoGeo BIOS
+BIOS_PATH="$BIOS_PATH/NeoGeo"
+BIOS_TYPE="NeoGeo"
+BIOS_URL="$NEOGEO_MAIN_URL"
+BIOS_LOG="BIOS_NeoGeo_Downloads.txt"
+
+if [ ! -f "$BIOS_PATH/uni-bios.rom" ];then
+#Download_Default_BIOS $BIOS_PATH $BIOS_TYPE $BIOS_URL $BIOS_LOG
+Download_NEOGEO_UNIBIOS $BIOS_PATH $BIOS_TYPE $BIOS_URL $BIOS_LOG
+fi
+
+if [ ! -f "$BASE_PATH/Games/NeoGeo/000-lo.lo" ] || [ ! -f "$BASE_PATH/Games/NeoGeo/sfix.sfix" ] || [ ! -f "$BASE_PATH/Games/NeoGeo/uni-bios.rom" ];then
+mkdir -p "$BASE_PATH/Games/NeoGeo"
+cd "$BIOS_PATH"
+cp 000-lo.lo "$BASE_PATH/Games/NeoGeo"
+cp sfix.sfix "$BASE_PATH/Games/NeoGeo"
+cp uni-bios.rom "$BASE_PATH/Games/NeoGeo"
+fi
+
 #Download Default Astrocade BIOS
 BIOS_PATH="$BASE_PATH/Games/Astrocade"
 BIOS_TYPE="Astrocade"
@@ -274,16 +318,6 @@ BIOS_URL="$NES_MAIN_URL"
 BIOS_LOG="BIOS_NES_Downloads.txt"
 
 if [ ! -f "$BIOS_PATH/boot0.rom" ];then
-Download_Default_BIOS $BIOS_PATH $BIOS_TYPE $BIOS_URL $BIOS_LOG
-fi
-
-#Download Default NeoGeo BIOS
-BIOS_PATH="$BASE_PATH/Games/NeoGeo"
-BIOS_TYPE="NeoGeo"
-BIOS_URL="$NEOGEO_MAIN_URL"
-BIOS_LOG="BIOS_NeoGeo_Downloads.txt"
-
-if [ ! -f "$BIOS_PATH/000-lo.lo" ] || [ ! -f "$BIOS_PATH/sfix.sfix" ] || [ ! -f "$BIOS_PATH/uni-bios.rom" ];then
 Download_Default_BIOS $BIOS_PATH $BIOS_TYPE $BIOS_URL $BIOS_LOG
 fi
 
