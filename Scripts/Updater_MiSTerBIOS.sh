@@ -30,6 +30,7 @@ By downloading and using this Script you are agreeing to the following:
 * I take no responsibility for any data loss or anything, use the script at your own risk.
 '
 
+# Version 1.1 - 09/07/2020 - Added ao486 BIOS
 # Version 1.0 - 07/01/2020 - Added initial Script 
 
 #=========   URL OPTIONS   =========
@@ -57,6 +58,9 @@ NEOGEO_UNIBIOS_URL="http://unibios.free.fr/download/uni-bios-40.zip"
 
 #TurboGrafx16 Main BIOS URL
 TGFX16_MAIN_URL="https://www.retrodriven.appboxes.co/MiSTerBIOS/Games/TGFX16-CD/"
+
+#ao486 Main BIOS URL
+ao486_MAIN_URL="https://www.retrodriven.appboxes.co/MiSTerBIOS/BIOS/ao486/"
 
 #=========   DIRECTORY OPTIONS   =========
 
@@ -125,7 +129,7 @@ esac
 RetroDriven_Banner(){
 echo
 echo " ------------------------------------------------------------"
-echo "|           RetroDriven: MiSTer BIOS Updater v1.0            |"
+echo "|           RetroDriven: MiSTer BIOS Updater v1.1            |"
 echo " ------------------------------------------------------------"
 sleep 1
 }
@@ -330,6 +334,14 @@ BIOS_LOG="BIOS_TGFX16CD_Downloads.txt"
 if [ ! -f "$BIOS_PATH/cd_bios.rom" ];then
 Download_Default_BIOS $BIOS_PATH $BIOS_TYPE $BIOS_URL $BIOS_LOG
 fi
+
+#ao486 BIOS
+mkdir -p "$BASE_PATH/ao486"
+BIOS_PATH="$BASE_PATH/ao486"
+BIOS_TYPE="ao486"
+BIOS_URL="$ao486_MAIN_URL"
+BIOS_LOG="BIOS_ao486_Downloads.txt"
+Download_Default_BIOS $BIOS_PATH $BIOS_TYPE $BIOS_URL $BIOS_LOG
 
 #Display Footer
 Footer
