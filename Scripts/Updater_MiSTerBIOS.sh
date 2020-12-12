@@ -132,6 +132,17 @@ echo " ------------------------------------------------------------"
 echo "|           RetroDriven: MiSTer BIOS Updater v1.1            |"
 echo " ------------------------------------------------------------"
 sleep 1
+
+echo
+echo " ------------------------------------------------------------"
+echo "                   *** IMPORTANT NOTE ***                     "
+echo
+echo "   All RetroDriven Scripts will be End Of Life January 2021   "
+echo
+echo "   Please see my GitHub, Twitter, or Patreon for full details "                         
+echo " ------------------------------------------------------------"
+sleep 10
+
 }
 
 #Download BIOS Function
